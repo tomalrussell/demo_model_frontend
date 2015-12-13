@@ -1,0 +1,126 @@
+.error {
+	box-shadow: 0px 0px 4px 1px red;
+}
+.message {
+	border-left: 0.25em solid #222;
+	padding: 0.2em 1em;
+}
+.input-block {
+	display: block;
+
+	input {
+		float: left;
+		margin-right: 1em;
+	}
+	label {
+		float: left;
+	}
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+fieldset{
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+.btn {
+	background: #fff;
+	border: 1px solid #222;
+	margin-top: 1em;
+	padding: 0.25em 5em;
+
+	font-size: 1.2em;
+	font-weight: bold;
+
+	&:hover, &:focus, &:active {
+		background: #222;
+		color: #fff;
+	}
+
+	&.block {
+		display: block;
+		margin-top: 1em;
+		margin-bottom: 3em;
+		width: 50%;
+		padding: 0.75em 4em;
+	}
+}
+
+input[type=range][orient=vertical]{
+	writing-mode: bt-lr; /* IE */
+	-webkit-appearance: slider-vertical; /* WebKit */
+	width: 8px;
+	height: 200px;
+	padding: 0 5px;
+}
+#map{
+	position: relative;
+	margin-bottom:80px;
+}
+#globe_y {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: 260px;
+	margin-top: -100px;
+}
+#globe_x {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	width: 240px;
+	margin-left: -120px;
+	margin-top: 15px;
+}
+
+/**
+ * Fancy Select boxes - use 'chosen', customised below
+ */
+.chosen-container{
+	font-size: 1em;
+	width: 100% !important;
+	margin: 1em 0;
+}
+.chosen-container-single .chosen-single{
+	border-radius: 0;
+	height: auto;
+	padding: 0.5em;
+	background: #fff;
+	span{
+		padding-bottom: 0.2em;
+	}
+}
+.chosen-container-single.chosen-with-drop .chosen-single{
+	background: #fff;
+}
+.chosen-container .chosen-results li.highlighted {
+	// background: #3875d7;
+	background: #222;
+}
+.chosen-container-single .chosen-single div b{
+	background-position: -2px 0.8em;
+	width: 8px;
+}
+.chosen-container-active .chosen-single{
+	border-color: #222;
+}
+.chosen-container-active.chosen-with-drop .chosen-single div b{
+	background-position: -20px 0.8em;
+}
+.chosen-container.chosen-container-single .chosen-drop .chosen-search input[type="text"]{
+	background: #fff;
+}
+.chosen-container-single .chosen-search:after{
+	content:"";
+	display: block;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	top: 0.8em;
+	right: 12px;
+	background: transparent url("chosen-sprite.png") no-repeat scroll -34px -24px;
+}

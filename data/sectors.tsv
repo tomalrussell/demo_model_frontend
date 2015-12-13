@@ -1,0 +1,9 @@
+sector_id	name
+0	All trade sectors
+1	Primary goods (food, agriculture, paper, leather)
+2	Secondary goods (chemicals, electricals, plastics)
+3	Raw materials (metals, fuel, minerals, wood)
+4	Trade (wholesale/retail goods, vehicles)
+5	Services (business, financial services, hospitality)
+6	Transport (inland, water, air transport)
+7	Public Services (health, education, construction, utilities)

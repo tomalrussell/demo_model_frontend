@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Enfolding</title>
+	<link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+	<a href="#settings" class="toggle-settings">Settings</a>
+	<div class="settings fullscreen offscreen">
+		<a href="#map" class="toggle-settings">Close</a>
+		<select name="midiIn" id="midiIn"></select>
+	</div>
+	<div class="start-screen fullscreen">
+		<h1>Global Trade Model</h1>
+		<hr>
+		<form class="form_start">
+			<p class="message hide"></p>
+			<div class="row">
+				<div class="col-1-2">
+					<h2>Player 1</h2>
+					<select name="player_1_country" id="player_1_country" class="select_country">
+						<option value="">Select a country</option>
+					</select>
+				</div>
+				<div class="col-1-2">
+					<h2>Player 2</h2>
+					<select name="player_2_country" id="player_2_country" class="select_country">
+						<option value="">Select another country</option>
+					</select>
+				</div>
+			</div>
+			<div class="row">
+				<button type="submit" class="btn block centered">Start</button>
+			</div>
+		</form>
+	</div>
+
+	<div id="map">
+		<input name="globe_x" id="globe_x" value="64" type="range" min="0" max="127" step="1">
+		<input name="globe_y" id="globe_y" value="64" type="range" min="0" max="127" step="1" orient="vertical">
+	</div>
+
+	<p class="row">Turn <span class="turn_count">1</span> of <span class="max_turns">1</span></p>
+	<div class="row country_info_wrap disable-while-loading">
+		<div class="loading-block"><p>Loading&hellip;</p></div>
+	</div>
+
+	<form action="/" method="post" class="form_change_relationship disable-while-loading">
+		<div class="loading-block"><p>Loading&hellip;</p></div>
+		<div class="row">
+			<div class="col-1-2">
+				<label for="change_1">Change the attitude of:</label>
+				<select name="change_1" id="change_1" class="select_country">
+					<option value="">Select a country</option>
+				</select>
+			</div>
+			<div class="col-1-2">
+				<label for="change_2">&hellip;towards:</label>
+				<select name="change_2" id="change_2" class="select_country">
+					<option value="">Select another country</option>
+				</select>
+			</div>
+			<div class="col-1-1">
+				<fieldset class="sectors"></fieldset>
+				<button class="btn block centered">GO!</button>
+			</div>
+		</div>
+	</form>
+
+	<form action="/" method="post" class="form_change_export disable-while-loading">
+		<div class="loading-block"><p>Loading&hellip;</p></div>
+		<div class="row">
+			<div class="col-1-1">
+				<label for="change_export_country">Change how much <span class="export_country">a country</span> is likely to export:</label>
+				<select name="change_export_country" id="change_export_country" class="select_country">
+					<option value="">Select a country</option>
+				</select>
+				<div class="input-block">
+					<input name="export_attractiveness" id="export_attractiveness" value="64" type="range" min="0" max="127" step="1">
+					<label for="export_attractiveness">How attractive are exports?</label>
+				</div>
+				<button class="btn block centered">GO!</button>
+			</div>
+		</div>
+	</form>
+
+	<form action="/" method="post" class="form_end row">
+		<button class="btn block centered">Start again</button>
+	</form>
+
+	<script src="./scripts/jquery-2.1.4.min.js"></script>
+	<script src="./scripts/chosen.jquery.min.js"></script>
+
+	<script src="./scripts/d3-3.5.6.min.js"></script>
+	<script src="./scripts/underscore-1.8.3.min.js"></script>
+	<script src="./scripts/topojson.min.js"></script>
+	<script src="./main.js"></script>
+</body>
+</html>

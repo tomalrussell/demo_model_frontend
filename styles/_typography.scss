@@ -1,0 +1,26 @@
+body {
+    margin: 1em;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size:1em;
+    color: #1e1e1e;
+}
+hr{
+  border-bottom: 1em solid #1e1e1e;
+  margin:0 0 1em;
+  clear: both;
+}
+@media screen and (max-width: 90em){
+  body{
+    font-size:1.1em;
+  }
+}
+@media screen and (max-width: 60em){
+  body{
+    font-size:1em;
+  }
+}
+@media screen and (max-width: 40em){
+  body{
+    font-size:0.9em;
+  }
+}
